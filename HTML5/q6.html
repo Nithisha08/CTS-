@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback</title>
+    <script>
+        function validatePhone() {
+            alert("Phone number validated");
+        }
+        function showFee() {
+            let event =
+                document.getElementById("eventType").value;
+            let fee = "";
+            if (event === "Music")
+                fee = "₹500";
+            else if (event === "Sports")
+                fee = "₹300";
+            else
+                fee = "₹700";
+            document.getElementById("fee")
+                .innerHTML =
+                "Event Fee: " + fee;
+        }
+        function submitFeedback() {
+            alert("Feedback Submitted Successfully");
+        }
+
+        function countCharacters(text) {
+            document.getElementById("count")
+                .innerHTML =
+                text.value.length;
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <h1>Event Feedback Form</h1>
+    Phone Number:
+    <input type="text" onblur="validatePhone()">
+    <br><br>
+    Event Type:
+    <select id="eventType" onchange="showFee()">
+        <option>Music</option>
+        <option>Sports</option>
+        <option>Festival</option>
+    </select>
+    <p id="fee"></p>
+    <button onclick="submitFeedback()">
+        Submit Feedback
+    </button>
+    <br><br>
+    <img src="event.jpg"
+        width="200"
+        ondblclick="this.style.width='400px'">
+    <br><br>
+    Comments:
+    <br>
+    <textarea rows="5"
+        cols="30"
+        onkeyup="countCharacters(this)">
+    </textarea>
+    <p>
+        Characters Typed:
+        <span id="count">0</span>
+    </p>
+    </center>
+</body>
+</html>

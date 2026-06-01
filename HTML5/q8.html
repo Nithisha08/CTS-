@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+    <script>
+        function savePreference() {
+            let eventType =
+                document.getElementById("eventType").value;
+
+            localStorage.setItem(
+                "preferredEvent",
+                eventType
+            );
+
+            alert("Preference Saved");
+        }
+        function loadPreference() {
+            let savedEvent =
+                localStorage.getItem("preferredEvent");
+
+            if (savedEvent) {
+                document.getElementById("eventType").value =
+                    savedEvent;
+            }
+        }
+        function clearPreference() {
+            localStorage.clear();
+            sessionStorage.clear();
+            alert("Preferences Cleared");
+        }
+    </script>
+</head>
+<body onload="loadPreference()">
+    <h1>User Preferences</h1>
+    <label>Select Event Type:</label>
+    <select id="eventType">
+        <option>Music</option>
+        <option>Sports</option>
+        <option>Festival</option>
+        <option>Technical</option>
+    </select>
+    <br><br>
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+    <button onclick="clearPreference()">
+        Clear Preferences
+    </button>
+</body>
+</html>
