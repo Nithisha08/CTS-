@@ -1,0 +1,16 @@
+
+.head1 {
+    color: blue;
+    text-align: center;
+}
+.para1 {
+    font-size: 18px;
+    color: darkgreen;
+}
+
+.btn1 {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+}
