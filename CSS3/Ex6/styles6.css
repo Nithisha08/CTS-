@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {
+    color: purple;
+}
+
+.menu {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 15px;
+}
+
+.eventlist {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.eventlist li {
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,30 @@
+/* Body background */
+
+body {
+    background-color: rgba(200, 200, 200, 0.5);
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Heading styles */
+
+.head1 {
+    color: #003366;
+    text-align: center;
+}
+
+/* Section header gradient */
+
+h2 {
+    background: linear-gradient(to right, lightblue, darkblue);
+    color: white;
+    padding: 10px;
+}
+
+/* Paragraph styles */
+
+p {
+    color: #222222;
+    font-size: 18px;
+}
